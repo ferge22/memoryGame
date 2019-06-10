@@ -1,6 +1,3 @@
-
-let allCards = document.querySelectorAll(".card");
-let resetBtn = document.getElementById("reset");
 // timer
 let timer = setInterval(clock, 1000);
 let sec = 0;
@@ -8,7 +5,8 @@ let min = 0;
 
 "use strict";
 
-// board variables
+let allCards = document.querySelectorAll(".card");
+let resetBtn = document.getElementById("reset");
 let isFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
