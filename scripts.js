@@ -92,7 +92,6 @@ function clock(){
 // IFFE invokes immediately, shuffling cards to random positions in html
 (function shuffle() {
   allCards.forEach(card => {
-    // Number between 0 to 15;
     let randomPosition = Math.ceil(Math.random() * 16);
     card.style.order = randomPosition;
   });
