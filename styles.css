@@ -58,3 +58,10 @@ body {
 .front_card {
     transform: rotateY(180deg);
 }
+
+button {
+    position: absolute;
+    z-index: 5;
+    top: -30px;
+    left: 5px;
+}
