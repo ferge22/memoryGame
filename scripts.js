@@ -1,8 +1,14 @@
-"use strict";
 
 let allCards = document.querySelectorAll(".card");
 let resetBtn = document.getElementById("reset");
+// timer
+let timer = setInterval(clock, 1000);
+let sec = 0;
+let min = 0;
 
+"use strict";
+
+// board variables
 let isFlipped = false;
 let lockBoard = false;
 let firstCard, secondCard;
@@ -63,6 +69,27 @@ allCards.forEach(card => card.addEventListener("click", flipCard));
 resetBtn.addEventListener('click', ()=> {
     location.reload();
 });
+
+function clock(){
+    
+    sec += 1;
+    if (sec == 60) {
+        min += 1;
+        sec = 00;
+        if (sec == 60) {
+            sec = 00;
+            min += 1;
+        }
+    }
+    document.getElementById("timer").innerHTML ="Timer: " + min +' min ' + sec + ' sec';
+
+    if(min == 60) {
+        alert('You hit the the limit');
+        sec = 0;
+        min = 0;
+        location.reload();
+    }
+}
 
 // Iffe invokes imeadetly shuffling cards to random positions
 (function shuffle() {
