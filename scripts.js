@@ -82,14 +82,14 @@ function clock(){
     document.getElementById("timer").innerHTML ="Timer: " + min +' min ' + sec + ' sec';
 
     if(min == 60) {
-        alert('You hit the the limit');
+        alert('You hit the limit');
         sec = 0;
         min = 0;
         location.reload();
     }
 }
 
-// Iffe invokes imeadetly shuffling cards to random positions
+// IFFE invokes immediately, shuffling cards to random positions in html
 (function shuffle() {
   allCards.forEach(card => {
     // Number between 0 to 15;
